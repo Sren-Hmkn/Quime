@@ -4,17 +4,163 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:padding="8dp"
     tools:context="com.example.android.quizme.MainActivity">
 
     <TextView
+        android:id="@+id/question_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="Question1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/textInverse"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <TextView
+        android:id="@+id/question_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="left"
+        android:paddingBottom="32dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp"
+        android:text="some questiontext going very long, propably longer than one line, but can also contain multiple line text like this one example here."
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="@id/question_view"
+        app:layout_constraintStart_toStartOf="@id/question_view"
+        app:layout_constraintTop_toBottomOf="@id/question_view"/>
+
+    <CheckBox
+        android:id="@+id/answerA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Answer A - can have some more text and several lines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/textInverse"
+        app:layout_constraintEnd_toStartOf="@id/answerB"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_textview"
+        />
+
+    <CheckBox
+        android:id="@+id/answerB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Answer B - can have some more text and several lines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/textInverse"
+        app:layout_constraintEnd_toEndOf="@id/question_textview"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/answerA"
+        app:layout_constraintTop_toBottomOf="@id/question_textview"/>
+
+    <CheckBox
+        android:id="@+id/answerC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Answer C - can have some more text and several lines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/textInverse"
+        app:layout_constraintEnd_toStartOf="@id/answerD"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answerA"/>
+
+    <CheckBox
+        android:id="@+id/answerD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Answer D - can have some more text and several lines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/textInverse"
+        app:layout_constraintEnd_toEndOf="@id/question_textview"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/answerC"
+        app:layout_constraintTop_toBottomOf="@id/answerB" />
+
+    <TextView
+        android:id="@+id/scoreHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="Score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/textInverse"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/question_view"
+        app:layout_constraintStart_toStartOf="@id/question_view"
+        app:layout_constraintTop_toBottomOf="@id/answerC"/>
+
+    <TextView
+        android:id="@+id/right_answers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/rightAnswers"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toStartOf="@id/wrong_answers"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/scoreHeader"
+        app:layout_constraintTop_toBottomOf="@id/scoreHeader"/>
+
+    <TextView
+        android:id="@+id/wrong_answers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/wrongAnswers"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="@id/scoreHeader"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/right_answers"
+        app:layout_constraintTop_toBottomOf="@id/scoreHeader"/>
+
+
+    <TextView
+        android:id="@+id/quime_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/textInverse"
+        android:text="QuiMe!"
+        android:textColor="@color/colorAccent"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/scoreHeader"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
 </android.support.constraint.ConstraintLayout>
