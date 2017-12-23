@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">Quime!</string>
+    <string name="app_name">QuiMe!</string>
+    <string name="question_header">Question </string>
+
+    <!-- Question Number 0 -->
+    <string name="question_text0">Question text number zero might be a longer one, but I am not sure yet...</string>
+    <string name="q0_answerA">Answer q.0A might be true or may be not</string>
+    <string name="q0_answerB">Answer q.0B might be true or may be not</string>
+    <string name="q0_answerC">Answer q.0C might be true or may be not</string>
+    <string name="q0_answerD">Answer q.0D might be true or may be not</string>
+
+    <!-- Question Number 1 -->
+    <string name="question_text1">Question text number one might be a longer one, but I am not sure yet...</string>
+    <string name="q1_answerA">Answer q.1A might be true or may be not</string>
+    <string name="q1_answerB">Answer q.1B might be true or may be not</string>
+    <string name="q1_answerC">Answer q.1C might be true or may be not</string>
+    <string name="q1_answerD">Answer q.1D might be true or may be not</string>
+
+    <!-- Question Number 2 -->
+    <string name="question_text2">Question text number two might be a longer one, but I am not sure yet...</string>
+    <string name="q2_answerA">Answer q.2A might be true or may be not</string>
+    <string name="q2_answerB">Answer q.2B might be true or may be not</string>
+    <string name="q2_answerC">Answer q.2C might be true or may be not</string>
+    <string name="q2_answerD">Answer q.2D might be true or may be not</string>
+
+    <!-- Question Number 3 -->
+    <string name="question_text3">Question text number three might be a longer one, but I am not sure yet...</string>
+    <string name="q3_answerA">Answer q.3A might be true or may be not</string>
+    <string name="q3_answerB">Answer q.3B might be true or may be not</string>
+    <string name="q3_answerC">Answer q.3C might be true or may be not</string>
+    <string name="q3_answerD">Answer q.3D might be true or may be not</string>
+
+
+
 </resources>

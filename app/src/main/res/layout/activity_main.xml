@@ -15,7 +15,7 @@
         android:background="@color/colorPrimary"
         android:gravity="center_horizontal"
         android:padding="8dp"
-        android:text="Question1"
+        android:text="@string/question_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/textInverse"
         android:textStyle="bold"
@@ -56,6 +56,7 @@
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/question_textview"
+        android:onClick="onClick"
         />
 
     <CheckBox
@@ -155,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/textInverse"
-        android:text="QuiMe!"
+        android:text="@string/app_name"
         android:textColor="@color/colorAccent"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -163,4 +164,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/scoreHeader"
         app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
